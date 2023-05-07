@@ -8,3 +8,4 @@ Tablolar: ilaclar,kullanıcı,müsteriler,tedarikçiler
 ![WhatsApp Görsel 2023-05-07 saat 23 36 49](https://user-images.githubusercontent.com/115810313/236701497-16d1b88c-5bc6-470d-b540-b22f7f125ef0.jpg)
 
 Fatih Murtaza dundar
+https://github.com/Iskenderun-Technical-University/ymg-donem-projesi-202503078/blob/main/Veritaban%C4%B1%20Destekli%20G%C3%B6rsel%20Programlama
