@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Mustafasonmez_proje
 {
-    public partial class Form1 : Form
+    public partial class Guncelle : Form
     {
-        public Form1()
+        public Guncelle()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

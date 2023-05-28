@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Mustafasonmez_proje
 {
-    public partial class Form1 : Form
+    public partial class UyeEkle : Form
     {
-        public Form1()
+        public UyeEkle()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
