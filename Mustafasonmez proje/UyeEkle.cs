@@ -35,7 +35,7 @@ namespace Mustafasonmez_proje
                 try
                 {
                     baglanti.Open();
-                    string query = "insert info UyeTbl values ('" + AdSoyadTb.Text + "','" + TelefonTb.Text + "','" + CinsiyetCb.SelectedItem.ToString() + "','" + YasTb.Text + "','" + OdemeTb.Text + "','" + ZamanlamaCb.SelectedItem.ToString() + "')";
+                    string query = "insert info UyeTbl values ('" +AdSoyadTb.Text+"','"+TelefonTb.Text+"','"+CinsiyetCb.SelectedItem.ToString()+"','"+YasTb.Text+"','"+OdemeTb.Text+"','"+ZamanlamaCb.SelectedItem.ToString()+"')";
                     SqlCommand komut = new SqlCommand(query, baglanti);
                     komut.ExecuteNonQuery();
                     MessageBox.Show("Üye Başarıyla eklendi.");
