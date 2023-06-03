@@ -25,8 +25,8 @@ namespace Mustafasonmez_proje
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            if (AdSoyadTb.Text == ""||TelefonTb.Text==""||OdemeTb.Text==""||YasTb.Text=="")
+        { 
+            if (AdSoyadTb.Text==""||TelefonTb.Text==""||OdemeTb.Text==""||YasTb.Text=="")
             {
                 MessageBox.Show("Hatalı bilgi girişi yaptınız.");
             }
@@ -43,8 +43,9 @@ namespace Mustafasonmez_proje
                 }catch(Exception Ex)
                 {
                     MessageBox.Show("Ex.Massage");
-                }
+                } 
             }
         }
     }
 }
+ 
