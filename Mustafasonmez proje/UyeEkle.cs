@@ -18,7 +18,7 @@ namespace Mustafasonmez_proje
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\90545\Documents\SalonDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection baglanti = new SqlConnection(@"");
         private void UyeEkle_Load(object sender, EventArgs e)
         {
 
@@ -35,14 +35,14 @@ namespace Mustafasonmez_proje
                 try
                 {
                     baglanti.Open();
-                    string query = "insert info UyeTbl values ('" +AdSoyadTb.Text+"','"+TelefonTb.Text+"','"+CinsiyetCb.SelectedItem.ToString()+"','"+YasTb.Text+"','"+OdemeTb.Text+"','"+ZamanlamaCb.SelectedItem.ToString()+"')";
+                    string query = "insert into UyeTbl values ('" +AdSoyadTb.Text+"','"+TelefonTb.Text+"','"+CinsiyetCb.SelectedItem.ToString()+"','"+YasTb.Text+"','"+OdemeTb.Text+"','"+ZamanlamaCb.SelectedItem.ToString()+"')";
                     SqlCommand komut = new SqlCommand(query, baglanti);
                     komut.ExecuteNonQuery();
                     MessageBox.Show("Üye Başarıyla eklendi.");
                     baglanti.Close();
                 }catch(Exception Ex)
                 {
-                    MessageBox.Show("Ex.Massage");
+                    MessageBox.Show("Ex.ToString()");
                 } 
             }
         }
