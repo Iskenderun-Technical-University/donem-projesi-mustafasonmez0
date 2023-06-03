@@ -31,16 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TelefonTb = new System.Windows.Forms.TextBox();
+            this.AdSoyadTb = new System.Windows.Forms.TextBox();
+            this.YasTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.CinsiyetCb = new System.Windows.Forms.ComboBox();
+            this.OdemeTb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ZamanlamaCb = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -72,26 +72,26 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefon Numarası";
             // 
-            // textBox1
+            // TelefonTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 165);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.TelefonTb.Location = new System.Drawing.Point(173, 165);
+            this.TelefonTb.Name = "TelefonTb";
+            this.TelefonTb.Size = new System.Drawing.Size(100, 22);
+            this.TelefonTb.TabIndex = 3;
             // 
-            // textBox2
+            // AdSoyadTb
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.AdSoyadTb.Location = new System.Drawing.Point(173, 101);
+            this.AdSoyadTb.Name = "AdSoyadTb";
+            this.AdSoyadTb.Size = new System.Drawing.Size(100, 22);
+            this.AdSoyadTb.TabIndex = 4;
             // 
-            // textBox4
+            // YasTb
             // 
-            this.textBox4.Location = new System.Drawing.Point(173, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 8;
+            this.YasTb.Location = new System.Drawing.Point(173, 217);
+            this.YasTb.Name = "YasTb";
+            this.YasTb.Size = new System.Drawing.Size(100, 22);
+            this.YasTb.TabIndex = 8;
             // 
             // label5
             // 
@@ -102,23 +102,23 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Yaş";
             // 
-            // comboBox1
+            // CinsiyetCb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CinsiyetCb.FormattingEnabled = true;
+            this.CinsiyetCb.Items.AddRange(new object[] {
             "ERKEK",
             "KADIN"});
-            this.comboBox1.Location = new System.Drawing.Point(173, 332);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 9;
+            this.CinsiyetCb.Location = new System.Drawing.Point(173, 332);
+            this.CinsiyetCb.Name = "CinsiyetCb";
+            this.CinsiyetCb.Size = new System.Drawing.Size(121, 24);
+            this.CinsiyetCb.TabIndex = 9;
             // 
-            // textBox5
+            // OdemeTb
             // 
-            this.textBox5.Location = new System.Drawing.Point(173, 282);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 10;
+            this.OdemeTb.Location = new System.Drawing.Point(173, 282);
+            this.OdemeTb.Name = "OdemeTb";
+            this.OdemeTb.Size = new System.Drawing.Size(100, 22);
+            this.OdemeTb.TabIndex = 10;
             // 
             // label4
             // 
@@ -147,10 +147,10 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Üyelik Süresi";
             // 
-            // comboBox2
+            // ZamanlamaCb
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.ZamanlamaCb.FormattingEnabled = true;
+            this.ZamanlamaCb.Items.AddRange(new object[] {
             "1 AY",
             "2 AY",
             "3 AY",
@@ -164,10 +164,10 @@
             "11 AY",
             "12 AY",
             "SINIRSIZ"});
-            this.comboBox2.Location = new System.Drawing.Point(173, 380);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 13;
+            this.ZamanlamaCb.Location = new System.Drawing.Point(173, 380);
+            this.ZamanlamaCb.Name = "ZamanlamaCb";
+            this.ZamanlamaCb.Size = new System.Drawing.Size(121, 24);
+            this.ZamanlamaCb.TabIndex = 13;
             // 
             // button1
             // 
@@ -177,6 +177,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "EKLE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UyeEkle
             // 
@@ -185,20 +186,21 @@
             this.ClientSize = new System.Drawing.Size(997, 439);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.ZamanlamaCb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.OdemeTb);
+            this.Controls.Add(this.CinsiyetCb);
+            this.Controls.Add(this.YasTb);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AdSoyadTb);
+            this.Controls.Add(this.TelefonTb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UyeEkle";
             this.Text = "UyeEkle";
+            this.Load += new System.EventHandler(this.UyeEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,16 +211,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TelefonTb;
+        private System.Windows.Forms.TextBox AdSoyadTb;
+        private System.Windows.Forms.TextBox YasTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox CinsiyetCb;
+        private System.Windows.Forms.TextBox OdemeTb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ZamanlamaCb;
         private System.Windows.Forms.Button button1;
     }
 }
