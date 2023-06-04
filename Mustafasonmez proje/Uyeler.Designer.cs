@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uyedatagrid = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uyedatagrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // uyedatagrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(423, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(694, 490);
-            this.dataGridView1.TabIndex = 0;
+            this.uyedatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uyedatagrid.Location = new System.Drawing.Point(423, 2);
+            this.uyedatagrid.Name = "uyedatagrid";
+            this.uyedatagrid.RowHeadersWidth = 51;
+            this.uyedatagrid.RowTemplate.Height = 24;
+            this.uyedatagrid.Size = new System.Drawing.Size(694, 490);
+            this.uyedatagrid.TabIndex = 0;
             // 
             // button1
             // 
@@ -69,7 +69,7 @@
             this.label1.Font = new System.Drawing.Font("Averta-Bold", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(37, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 58);
+            this.label1.Size = new System.Drawing.Size(271, 57);
             this.label1.TabIndex = 4;
             this.label1.Text = "ÜYE LİSTESİ";
             // 
@@ -81,10 +81,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.uyedatagrid);
             this.Name = "Uyeler";
             this.Text = "Uyeler";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Uyeler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uyedatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,7 +93,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView uyedatagrid;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;

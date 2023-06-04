@@ -16,5 +16,28 @@ namespace Mustafasonmez_proje
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UyeEkle uyeekle = new UyeEkle();
+            uyeekle.Show();
+            this.Hide();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Guncelle guncelle = new Guncelle();
+            guncelle.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Odeme odeme = new Odeme();
+            odeme.Show();
+            this.Hide();
+
+        }
     }
 }
