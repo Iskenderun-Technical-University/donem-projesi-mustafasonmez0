@@ -16,7 +16,7 @@ namespace Mustafasonmez_proje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Guncelle());
+            Application.Run(new Odeme());
         }
     }
 }

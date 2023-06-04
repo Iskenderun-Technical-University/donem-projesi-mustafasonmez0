@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Periyot = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.OdemeTb = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.OdemeDgv = new System.Windows.Forms.DataGridView();
+            this.AdSoyadCb = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.OdemeDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // Periyot
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Averta-Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(55, 110);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePicker1.TabIndex = 0;
+            this.Periyot.CalendarFont = new System.Drawing.Font("Averta-Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Periyot.Location = new System.Drawing.Point(55, 110);
+            this.Periyot.Name = "Periyot";
+            this.Periyot.Size = new System.Drawing.Size(225, 22);
+            this.Periyot.TabIndex = 0;
             // 
             // label1
             // 
@@ -74,19 +74,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "TUTAR";
             // 
-            // textBox1
+            // OdemeTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 291);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(55, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
+            this.OdemeTb.Location = new System.Drawing.Point(55, 291);
+            this.OdemeTb.Name = "OdemeTb";
+            this.OdemeTb.Size = new System.Drawing.Size(100, 22);
+            this.OdemeTb.TabIndex = 4;
             // 
             // button1
             // 
@@ -96,33 +89,43 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "ÖDEME";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // OdemeDgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(492, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(593, 345);
-            this.dataGridView1.TabIndex = 7;
+            this.OdemeDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OdemeDgv.Location = new System.Drawing.Point(492, 52);
+            this.OdemeDgv.Name = "OdemeDgv";
+            this.OdemeDgv.RowHeadersWidth = 51;
+            this.OdemeDgv.RowTemplate.Height = 24;
+            this.OdemeDgv.Size = new System.Drawing.Size(593, 345);
+            this.OdemeDgv.TabIndex = 7;
+            // 
+            // AdSoyadCb
+            // 
+            this.AdSoyadCb.FormattingEnabled = true;
+            this.AdSoyadCb.Location = new System.Drawing.Point(55, 201);
+            this.AdSoyadCb.Name = "AdSoyadCb";
+            this.AdSoyadCb.Size = new System.Drawing.Size(100, 24);
+            this.AdSoyadCb.TabIndex = 8;
             // 
             // Odeme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 418);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.AdSoyadCb);
+            this.Controls.Add(this.OdemeDgv);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.OdemeTb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Periyot);
             this.Name = "Odeme";
             this.Text = "Odeme";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Odeme_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.OdemeDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,13 +133,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Periyot;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox OdemeTb;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView OdemeDgv;
+        private System.Windows.Forms.ComboBox AdSoyadCb;
     }
 }
