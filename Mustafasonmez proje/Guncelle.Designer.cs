@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.uyedatagrid = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uyedatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,12 +176,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(108, 470);
+            this.button1.Location = new System.Drawing.Point(186, 474);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 51);
+            this.button1.Size = new System.Drawing.Size(131, 42);
             this.button1.TabIndex = 29;
-            this.button1.Text = "GÜNCELLE";
+            this.button1.Text = "SİL";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // uyedatagrid
             // 
@@ -191,7 +193,7 @@
             this.uyedatagrid.RowTemplate.Height = 24;
             this.uyedatagrid.Size = new System.Drawing.Size(694, 490);
             this.uyedatagrid.TabIndex = 30;
-            this.uyedatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uyedatagrid_CellContentClick);
+            this.uyedatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uyedatagrid_CellClick);
             // 
             // label8
             // 
@@ -200,15 +202,26 @@
             this.label8.ForeColor = System.Drawing.Color.IndianRed;
             this.label8.Location = new System.Drawing.Point(467, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(530, 40);
+            this.label8.Size = new System.Drawing.Size(503, 38);
             this.label8.TabIndex = 31;
             this.label8.Text = "Silinecek üyeye tıklayınız.";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 474);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 42);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "GÜNECELLE";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Guncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 562);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.uyedatagrid);
             this.Controls.Add(this.button1);
@@ -252,5 +265,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView uyedatagrid;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
     }
 }

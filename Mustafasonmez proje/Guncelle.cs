@@ -40,9 +40,11 @@ namespace Mustafasonmez_proje
         {
             uyeler();
         }
-        private void uyedatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        int key = 0;
+
+        private void uyedatagrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            uyedatagrid.CellClick += uyedatagrid_CellContentClick;
+            key = Convert.ToInt32(uyedatagrid.SelectedRows[0].Cells[0].Value.ToString());
 
             AdSoyadTb.Text = uyedatagrid.SelectedRows[0].Cells[1].Value.ToString();
             TelefonTb.Text = uyedatagrid.SelectedRows[0].Cells[2].Value.ToString();
@@ -50,6 +52,58 @@ namespace Mustafasonmez_proje
             YasTb.Text = uyedatagrid.SelectedRows[0].Cells[4].Value.ToString();
             OdemeTb.Text = uyedatagrid.SelectedRows[0].Cells[5].Value.ToString();
             ZamanlamaCb.Text = uyedatagrid.SelectedRows[0].Cells[6].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(key == 0)
+            {
+                MessageBox.Show("Silinecek üyeyi seçmediniz.");
+                
+            }
+            else
+            {
+                try
+                {
+                    baglanti.Open();
+                    string query = "delete from UyeTbl where UId=" + key + ";";
+                    SqlCommand komut = new SqlCommand(query, baglanti);
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Üye başarıyla silindi.");
+                    baglanti.Close();
+                    uyeler();
+                }
+                catch(Exception Ex) {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (key == 0 ||AdSoyadTb.Text==""||TelefonTb.Text==""||CinsiyetCb.Text==""||YasTb.Text==""||OdemeTb.Text==""||ZamanlamaCb.Text=="")
+            {
+                MessageBox.Show("Hatalı giriş yaptınız.");
+
+            }
+            else
+            {
+                try
+                {
+                    baglanti.Open();
+                    string query = "update  UyeTbl set UAdSoyad='"+AdSoyadTb.Text+"',UTelefon='"+TelefonTb.Text+"',UCinsiyet='"+CinsiyetCb.Text+"',UYas='"+YasTb.Text+"',UOdeme='"+OdemeTb.Text+"',UZamanlama='"+ZamanlamaCb.Text+"' where  UId="+key+";";
+                    
+                    SqlCommand komut = new SqlCommand(query, baglanti);
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Güncellendi.");
+                    baglanti.Close();
+                    uyeler();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }
