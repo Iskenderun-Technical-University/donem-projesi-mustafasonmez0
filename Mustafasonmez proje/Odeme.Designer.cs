@@ -36,13 +36,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.OdemeDgv = new System.Windows.Forms.DataGridView();
             this.AdSoyadCb = new System.Windows.Forms.ComboBox();
+            this.AraTb = new System.Windows.Forms.TextBox();
+            this.Arabtn = new System.Windows.Forms.Button();
+            this.Yenilebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OdemeDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // Periyot
             // 
             this.Periyot.CalendarFont = new System.Drawing.Font("Averta-Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Periyot.Location = new System.Drawing.Point(55, 110);
+            this.Periyot.Location = new System.Drawing.Point(55, 175);
             this.Periyot.Name = "Periyot";
             this.Periyot.Size = new System.Drawing.Size(225, 22);
             this.Periyot.TabIndex = 0;
@@ -50,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 73);
+            this.label1.Location = new System.Drawing.Point(52, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 1;
@@ -59,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 159);
+            this.label2.Location = new System.Drawing.Point(52, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 2;
@@ -68,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 245);
+            this.label3.Location = new System.Drawing.Point(52, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 3;
@@ -76,14 +79,14 @@
             // 
             // OdemeTb
             // 
-            this.OdemeTb.Location = new System.Drawing.Point(55, 291);
+            this.OdemeTb.Location = new System.Drawing.Point(55, 331);
             this.OdemeTb.Name = "OdemeTb";
             this.OdemeTb.Size = new System.Drawing.Size(100, 22);
             this.OdemeTb.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(55, 354);
+            this.button1.Location = new System.Drawing.Point(29, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 52);
             this.button1.TabIndex = 6;
@@ -94,7 +97,7 @@
             // OdemeDgv
             // 
             this.OdemeDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OdemeDgv.Location = new System.Drawing.Point(492, 52);
+            this.OdemeDgv.Location = new System.Drawing.Point(554, 110);
             this.OdemeDgv.Name = "OdemeDgv";
             this.OdemeDgv.RowHeadersWidth = 51;
             this.OdemeDgv.RowTemplate.Height = 24;
@@ -104,16 +107,48 @@
             // AdSoyadCb
             // 
             this.AdSoyadCb.FormattingEnabled = true;
-            this.AdSoyadCb.Location = new System.Drawing.Point(55, 201);
+            this.AdSoyadCb.Location = new System.Drawing.Point(55, 247);
             this.AdSoyadCb.Name = "AdSoyadCb";
             this.AdSoyadCb.Size = new System.Drawing.Size(100, 24);
             this.AdSoyadCb.TabIndex = 8;
+            // 
+            // AraTb
+            // 
+            this.AraTb.Location = new System.Drawing.Point(656, 30);
+            this.AraTb.Multiline = true;
+            this.AraTb.Name = "AraTb";
+            this.AraTb.Size = new System.Drawing.Size(141, 36);
+            this.AraTb.TabIndex = 9;
+            this.AraTb.TextChanged += new System.EventHandler(this.AraTb_TextChanged);
+            // 
+            // Arabtn
+            // 
+            this.Arabtn.Location = new System.Drawing.Point(843, 30);
+            this.Arabtn.Name = "Arabtn";
+            this.Arabtn.Size = new System.Drawing.Size(97, 36);
+            this.Arabtn.TabIndex = 10;
+            this.Arabtn.Text = "ARA";
+            this.Arabtn.UseVisualStyleBackColor = true;
+            this.Arabtn.Click += new System.EventHandler(this.Arabtn_Click);
+            // 
+            // Yenilebtn
+            // 
+            this.Yenilebtn.Location = new System.Drawing.Point(946, 30);
+            this.Yenilebtn.Name = "Yenilebtn";
+            this.Yenilebtn.Size = new System.Drawing.Size(97, 36);
+            this.Yenilebtn.TabIndex = 11;
+            this.Yenilebtn.Text = "YENİLE";
+            this.Yenilebtn.UseVisualStyleBackColor = true;
+            this.Yenilebtn.Click += new System.EventHandler(this.Yenilebtn_Click);
             // 
             // Odeme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 418);
+            this.ClientSize = new System.Drawing.Size(1159, 460);
+            this.Controls.Add(this.Yenilebtn);
+            this.Controls.Add(this.Arabtn);
+            this.Controls.Add(this.AraTb);
             this.Controls.Add(this.AdSoyadCb);
             this.Controls.Add(this.OdemeDgv);
             this.Controls.Add(this.button1);
@@ -141,5 +176,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView OdemeDgv;
         private System.Windows.Forms.ComboBox AdSoyadCb;
+        private System.Windows.Forms.TextBox AraTb;
+        private System.Windows.Forms.Button Arabtn;
+        private System.Windows.Forms.Button Yenilebtn;
     }
 }

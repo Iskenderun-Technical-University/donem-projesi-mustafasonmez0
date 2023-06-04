@@ -36,9 +36,29 @@ namespace Mustafasonmez_proje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Login log = new Login();
-            log.Show();
+            Anasayfa asyf = new Anasayfa();
+            asyf.Show();
             this.Hide();
+        }
+        private void Adfiltrele()
+        {
+            baglanti.Open();
+            string query = "select *from UyeTbl where UAdSoyad='" + AraUyeTextbox.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, baglanti);
+            SqlCommandBuilder builder = new SqlCommandBuilder();
+            var ds = new DataSet();
+            sda.Fill(ds);
+            uyedatagrid.DataSource = ds.Tables[0];
+            baglanti.Close();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Adfiltrele();
+        }
+
+        private void Yeniletextbox_Click(object sender, EventArgs e)
+        {
+            uyeler();
         }
     }
 }

@@ -42,6 +42,17 @@ namespace Mustafasonmez_proje
             OdemeDgv.DataSource = ds.Tables[0];
             baglanti.Close();
         }
+        private void Adfiltrele()
+        {
+            baglanti.Open();
+            string query = "select *from OdemeTbl where OUye='"+AraTb.Text+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, baglanti);
+            SqlCommandBuilder builder = new SqlCommandBuilder();
+            var ds = new DataSet();
+            sda.Fill(ds);
+            OdemeDgv.DataSource = ds.Tables[0];
+            baglanti.Close();
+        }
         private void Odeme_Load(object sender, EventArgs e)
         {
             FillName();
@@ -76,6 +87,21 @@ namespace Mustafasonmez_proje
                 baglanti.Close();
                 uyeler();
             }
+        }
+
+        private void Arabtn_Click(object sender, EventArgs e)
+        {
+            Adfiltrele();
+        }
+
+        private void Yenilebtn_Click(object sender, EventArgs e)
+        {
+            uyeler();
+        }
+
+        private void AraTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

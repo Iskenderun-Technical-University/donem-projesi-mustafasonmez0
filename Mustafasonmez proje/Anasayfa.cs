@@ -39,5 +39,12 @@ namespace Mustafasonmez_proje
             this.Hide();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Uyeler uyelerigoruntule = new Uyeler();
+            uyelerigoruntule.Show();
+            this.Hide();
+        }
     }
 }
