@@ -18,7 +18,7 @@ namespace Mustafasonmez_proje
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection(@"");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\90545\Documents\Salondb.mdf;Integrated Security=True;Connect Timeout=30");
         private void UyeEkle_Load(object sender, EventArgs e)
         {
 
@@ -45,6 +45,24 @@ namespace Mustafasonmez_proje
                     MessageBox.Show("Ex.ToString()");
                 } 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdSoyadTb.Text = "";
+            TelefonTb.Text = "";
+            OdemeTb.Text = "";
+            YasTb.Text = "";
+            CinsiyetCb.Text = "";
+            ZamanlamaCb.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+
         }
     }
 }
