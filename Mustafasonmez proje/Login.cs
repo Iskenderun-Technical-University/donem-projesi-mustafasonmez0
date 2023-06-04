@@ -38,12 +38,16 @@ namespace Mustafasonmez_proje
             dr=com.ExecuteReader();
             if (dr.Read()) {
                 MessageBox.Show("Giriş yapılıyor.");
+                Anasayfa ansyfa = new Anasayfa();
+                ansyfa.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Hatalı giriş yaptınız.");
             }
             con.Close();
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
