@@ -103,5 +103,39 @@ namespace Mustafasonmez_proje
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Anasayfa asy = new Anasayfa();
+            asy.Show();
+            this.Hide();
+        }
+
+        private void AdSoyadCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OdemeDgv.DataSource = null;
+            OdemeDgv.Rows.Clear();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void OdemeDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

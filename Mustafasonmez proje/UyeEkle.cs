@@ -59,8 +59,8 @@ namespace Mustafasonmez_proje
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Login log = new Login();
-            log.Show();
+            Anasayfa asy = new Anasayfa();
+            asy.Show();
             this.Hide();
 
         }

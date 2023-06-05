@@ -105,5 +105,12 @@ namespace Mustafasonmez_proje
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Anasayfa asy1 = new Anasayfa();
+            asy1.Show();
+            this.Hide();
+        }
     }
 }

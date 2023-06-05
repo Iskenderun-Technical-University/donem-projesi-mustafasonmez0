@@ -46,5 +46,12 @@ namespace Mustafasonmez_proje
             uyelerigoruntule.Show();
             this.Hide();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Login lgn = new Login();
+            lgn.Show();
+            this.Hide();
+        }
     }
 }

@@ -72,7 +72,7 @@
             // 
             this.TelefonTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.TelefonTb.ForeColor = System.Drawing.Color.Crimson;
-            this.TelefonTb.Location = new System.Drawing.Point(27, 143);
+            this.TelefonTb.Location = new System.Drawing.Point(285, 143);
             this.TelefonTb.Multiline = true;
             this.TelefonTb.Name = "TelefonTb";
             this.TelefonTb.Size = new System.Drawing.Size(155, 36);
@@ -81,7 +81,7 @@
             // AdSoyadTb
             // 
             this.AdSoyadTb.ForeColor = System.Drawing.Color.Crimson;
-            this.AdSoyadTb.Location = new System.Drawing.Point(287, 143);
+            this.AdSoyadTb.Location = new System.Drawing.Point(27, 143);
             this.AdSoyadTb.Multiline = true;
             this.AdSoyadTb.Name = "AdSoyadTb";
             this.AdSoyadTb.Size = new System.Drawing.Size(155, 36);

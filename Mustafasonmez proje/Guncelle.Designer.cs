@@ -45,7 +45,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uyedatagrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ZamanlamaCb
@@ -113,12 +117,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Herborn", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 21);
+            this.label1.Font = new System.Drawing.Font("Averta-Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 31);
+            this.label1.Size = new System.Drawing.Size(422, 48);
             this.label1.TabIndex = 15;
-            this.label1.Text = "UYELIK GUNCELLE";
+            this.label1.Text = "UYELIK GUNCELLE/SİL";
             // 
             // button1
             // 
@@ -143,18 +147,18 @@
             this.uyedatagrid.Name = "uyedatagrid";
             this.uyedatagrid.RowHeadersWidth = 51;
             this.uyedatagrid.RowTemplate.Height = 24;
-            this.uyedatagrid.Size = new System.Drawing.Size(996, 303);
+            this.uyedatagrid.Size = new System.Drawing.Size(1023, 414);
             this.uyedatagrid.TabIndex = 30;
             this.uyedatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uyedatagrid_CellClick);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.IndianRed;
-            this.label8.Location = new System.Drawing.Point(467, 21);
+            this.label8.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label8.Location = new System.Drawing.Point(3, 8);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(503, 38);
+            this.label8.Size = new System.Drawing.Size(420, 33);
             this.label8.TabIndex = 31;
             this.label8.Text = "Silinecek üyeye tıklayınız.";
             // 
@@ -231,11 +235,47 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "ADI SOYADI";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Orange;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.Info;
+            this.button3.Location = new System.Drawing.Point(825, 177);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(131, 42);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "GERİ";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Crimson;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.Info;
+            this.button4.Location = new System.Drawing.Point(657, 177);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(131, 42);
+            this.button4.TabIndex = 40;
+            this.button4.Text = "TEMİZLE";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Location = new System.Drawing.Point(488, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(444, 57);
+            this.panel1.TabIndex = 41;
+            // 
             // Guncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 656);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -243,7 +283,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.uyedatagrid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ZamanlamaCb);
@@ -253,10 +292,13 @@
             this.Controls.Add(this.AdSoyadTb);
             this.Controls.Add(this.TelefonTb);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "Guncelle";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Guncelle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uyedatagrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +322,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
