@@ -73,6 +73,7 @@
             this.AraUyeTextbox.Size = new System.Drawing.Size(280, 45);
             this.AraUyeTextbox.TabIndex = 3;
             this.AraUyeTextbox.Text = "İsim giriniz";
+            this.AraUyeTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
